@@ -36,7 +36,7 @@ public class IntroduccionArrays {
         // 3. Llama a la función mostrarTemperaturas
 
 int[]maxTemperaturas;
-
+int[] maxTemperaturas = new int[];
 
 
 
