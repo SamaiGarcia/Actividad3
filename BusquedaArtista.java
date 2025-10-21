@@ -58,11 +58,10 @@ public class BusquedaArtista {
         // TODO:
         // Devuelve true si indiceDe(cartel, nombreBuscado) es distinto de -1.
         // En caso contrario, false.
-         boolean Artistas = true;
-
+    
         return false;
     
-    }
+    
 
     /**
      * Devuelve un array con todos los índices donde el nombre coincide (ignora mayúsculas).
@@ -77,8 +76,23 @@ public class BusquedaArtista {
         // 2) Crea un nuevo int[] del tamaño contado.
         // 3) Recorre de nuevo y rellena ese array con los índices encontrados.
         // 4) Devuélvelo.
-        return new int[0];
+        int contador = 0;
+        for (Artista artista : cartel) {
+        if (artista.getNombre().equalsIgnoreCase(nombreBuscado)) {
+            contador++;
+        }
     }
+         int[] indices = new int[contador];
+         int pos = 0;
+         for (int i = 0; i < cartel.length; i++) {
+         if (cartel[i].getNombre().equalsIgnoreCase(nombreBuscado)) {
+            indices[pos] = i;
+        }
+    }
+
+          return indices;
+}
+        
 
     /**
      * Devuelve un array con los índices de artistas cuyo nombre empieza por la 'inicial' dada.
@@ -92,7 +106,10 @@ public class BusquedaArtista {
         // Pista: compara Character.toLowerCase(inicial) con
         // Character.toLowerCase(cartel[i].getNombre().charAt(0)).
         // Haz el mismo patrón de "contar -> crear array -> rellenar -> devolver".
-        return new int[0];
+     
+   
+}
+
     }
 
     /**
@@ -110,8 +127,10 @@ public class BusquedaArtista {
         // 3) Crea un int[] del tamaño contado.
         // 4) Segunda pasada: rellena el array con los índices que cumplen.
         // 5) Devuelve el array.
-        return new int[0];
-    }
+
+}
+
+    
 
 
     /**
@@ -124,6 +143,12 @@ public class BusquedaArtista {
         // Recorre 'indices' y para cada 'idx' imprime:
         // System.out.println("  - [" + idx + "] " + cartel[idx]);
         // (No hagas bucles en main; hazlos aquí).
+       
+    for (int idx : indices) {
+        System.out.println("  - [" + idx + "] " + cartel[idx]);
+    }
+}
+
     }
 
     // ------------------------------------------------------------
